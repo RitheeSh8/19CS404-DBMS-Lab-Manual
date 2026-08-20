@@ -175,7 +175,26 @@ Reversed number is 5351
 
 ### Program
 ```
-
+DECLARE
+    a NUMBER;
+    b NUMBER;
+    c NUMBER;
+    largest NUMBER;
+BEGIN
+    a:=&a;
+    b:=&b;
+    c:=&c;
+    IF a >=b AND a>=c THEN
+        largest := a;
+    ELSIF b>=a AND b>=c THEN
+        largest:=b;
+    ELSE
+        largest:=c;
+    END IF;
+    DBMS_OUTPUT.PUT_LINE('Largest Number: ' || largest);
+END;
+/
+/
 ```
 ### Steps:
 - Declare three numeric variables `a`, `b`, and `c`.
@@ -185,6 +204,11 @@ Reversed number is 5351
 **Expected Output:**  
 a = 10, b = 9, c = 15  
 Largest of three number is 15
+
+**Output**
+
+<img width="865" height="306" alt="image" src="https://github.com/user-attachments/assets/c9ccb4f5-9699-4420-9579-a6cc8164b102" />
+
 
 ## RESULT
 Thus, the PL/SQL programs using variables, conditionals, and loops were executed successfully.
